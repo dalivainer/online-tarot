@@ -16,33 +16,33 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Title -->
-    <title>Tirame Una Carta | Tarot Online Marselle</title>
+    <title>Tirame Una Carta | Tarot Online Marselle | Ingresar</title>
 </head>
 <body>
     <!-- HEADER y NAV -->
     <header>
-        <nav class="nav-header">
-            <ul class="nav-sup">
-                <li id="page-name">
-                    <a href="index.html"><h1>TIRAME UNA CARTA</h1></a> <!-- Logo -->
-                </li> 
-                <li>
-                    <a class="link-login" href="pages/ingresar.html">Ingresar</a> <!-- Storage -->
-                </li> 
-            </ul>
-        </nav>
+       <nav class="nav-header">
+           <ul class="nav-sup">
+            <li id="page-name">
+                   <a href="../index.html"><h1>TIRAME UNA CARTA</h1></a> <!-- Logo -->
+            </li> 
+            <li>
+                <a class="link-login" href="../index.html">Volver al inicio</a>
+            </li> 
+           </ul>
+       </nav>
     </header>
     <!-- MAIN -->
     <main>
-        <section class="card-display">
-            <div class="btn-container">
-                <img src="media/cardback.jpg" alt="cardback">
-                <button class="card-btn">Tirame una Carta</button>
-              </div>
-        </section>
-        <section class="card-text">
-            <h2 id="card-title"></h2>
-            <p id="card-description"></p>
+        <section>
+            <div>
+                <form> <!-- Este div luego se comvierte en un mensaje de bienvenida, o se transforma en un sweetalert -->
+                    <label for="user-name">Nombre de usuario:</label>
+                    <input type="text" id="user-name" value="">
+                    <label for="password">Contraseña:</label>
+                    <input type="text" id="password" value="">
+                  </form>
+            </div>
         </section>
     </main>
     <!-- FOOTER -->
