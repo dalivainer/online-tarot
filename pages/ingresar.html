@@ -35,15 +35,14 @@
     <!-- MAIN -->
     <main>
         <section>
-            <div>
-                <form> <!-- Este div luego se comvierte en un mensaje de bienvenida, o se transforma en un sweetalert -->
-                    <label for="user-name">Nombre de usuario:</label>
-                    <input type="text" id="user-name" value="">
-                    <label for="password">Contraseña:</label>
-                    <input type="text" id="password" value="">
-                  </form>
+            <div id="form">
+                <p>Crea un nombre de usuario y la próxima vez que ingreses sabrás qué carta salió en tu última tirada</p>
+                <form action="">
+                    <label for="GET-name">Nombre de usuario:</label>
+                    <input id="user-name" type="text" placeholder="Ingresa aquí">
+                    <input id="save" type="submit" value="Guardar">
+                </form>
             </div>
-        </section>
     </main>
     <!-- FOOTER -->
     <footer>
@@ -56,5 +55,6 @@
             </ul>
         </nav>
     </footer>
+    <script src="singup.js"></script>
 </body>
 </html>

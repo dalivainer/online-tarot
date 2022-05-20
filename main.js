@@ -1,3 +1,4 @@
+// HOME SETTINGS
 // Establecimiento previo
 //Cambiar titulo
 let title = document.getElementById("card-title");
