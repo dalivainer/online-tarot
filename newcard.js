@@ -133,10 +133,10 @@ cardBtn.addEventListener("click", throwCard);
         let message = document.querySelector("p");
         message.innerText = result.message;
         //Refresh button
-        let refreshBtn = document.createElement("button");
+        let refreshBtn = document.createElement("div");
         let btnContainer = document.getElementById("btn-container");
         btnContainer.appendChild(refreshBtn);
-        refreshBtn.innerHTML = `<button type="button" class="btn btn-outline-dark">Sacar otra carta</button>`;
+        refreshBtn.innerHTML = `<button type="button" class="bottom-btn">Sacar otra carta</button>`;
         const reload = () => {
             swal("¿Estás segurx? Si el mensaje te resonó suficiente, quédate con eso. \n Si te faltó más, sacá otra carta. ", {
                 buttons:{
@@ -151,10 +151,6 @@ cardBtn.addEventListener("click", throwCard);
                 switch (value) {
                   case "again":
                         location.reload();
-                        swal({
-                            title: "¡Vamos de nuevo!",
-                            button: "Go",
-                          });
                     break;
                 }
               });

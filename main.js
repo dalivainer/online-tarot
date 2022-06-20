@@ -1,8 +1,8 @@
 // Welcome
-let welcome = swal({
+swal({
     title: "Bienvenidx a Tirame una Carta",
     text: "¿Estás listx para recibir tu mensaje del Tarot? \n Apretá la carta para recibir tu mensaje",
-    button: "Yendo",
+    button: "Ok",
   });
 
 // Card Array
@@ -140,27 +140,29 @@ cardBtn.addEventListener("click", throwCard);
         let message = document.querySelector("p");
         message.innerText = result.message;
         //Refresh button
-        let refreshBtn = document.createElement("button");
+        let refreshBtn = document.createElement("div");
         let btnContainer = document.getElementById("btn-container");
         btnContainer.appendChild(refreshBtn);
-        refreshBtn.innerHTML = `<button type="button" class="btn btn-outline-dark">Sacar otra carta</button>`;
+        refreshBtn.innerHTML = `<button type="button" class="bottom-btn">Sacar otra carta</button>`;
         const reload = () => {
-            swal("¿Estás segurx? Si el mensaje te resonó suficiente, quédate con eso. \n Si te faltó más, sacá otra carta. ", {
+            swal({
+                title: "¿Estás segurx?",
+                text:" Si el mensaje te resonó suficiente, quédate con eso. \n Si te faltó más, sacá otra carta. ", 
                 buttons:{
                     cancel: "Ok, me voy a pensar",
                     again: {
-                      text: "Quiero más",
-                      value: "again",
+                        text: "Quiero más",
+                        value: "again",
                     },
-                  },
-              })
-              .then((value) => {
+                },
+            })
+            .then((value) => {
                 switch (value) {
-                  case "again":
+                    case "again":
                         location.replace("newcard.html");
-                    break;
-                }
-              });
-        };
-        refreshBtn.addEventListener("click", reload);
+                        break;
+                    }
+                });
+            };
+            refreshBtn.addEventListener("click", reload);
     };

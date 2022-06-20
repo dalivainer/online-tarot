@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Media queries -->
     <!-- SEO -->
     <meta name="description" content="Online Tarot Reading">
     <meta name="keywords" content="tarot, readings, online readings, mayor arcana, marselle">
@@ -13,19 +12,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
-    <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=My+Soul&display=swap" rel="stylesheet">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Title -->
     <title>Tirame Una Carta | Tarot Online Marselle</title>
 </head>
 <body>
+    <div class="upper-body">
     <!-- HEADER y NAV -->
     <header>
-        <nav class="nav-header">
-            <!-- INSERTAR NAV BOOSTRAP O SIN NAV DIRECTAMENTE-->
-            <!-- OJO CON LOS QUERY SELECTORS -->
+        <nav>
+            <div class="pageName">
+                <a href="index.html">
+                    <img id="tirame-carta" src="media/Tirame.png" alt="tirame-una-carta">
+                </a>
+            </div>
         </nav>
     </header>
     <!-- MAIN -->
@@ -39,17 +43,18 @@
                 </button>
               </div>
         </section>
+    </div>
         <!-- CARD TEXT SECTION -->
+    <div class="lower-body">
         <section class="card-text">
             <h1></h1>
             <p></p>
             <div id="btn-container"></div>
         </section>
+    </div>
     </main>
+
 <!-- SCRIPTS -->
-    <!-- Boostrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Main Js -->
