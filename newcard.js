@@ -157,4 +157,13 @@ cardBtn.addEventListener("click", throwCard);
         };
         refreshBtn.addEventListener("click", reload);
 
+        // STORAGE
+        sessionStorage.setItem("lastCard", result.name);
+        let itemName = sessionStorage.getItem("lastCard");
+        // Dom
+        let listStorage = document.getElementById("listStorage");
+        let listItem = document.createElement("p");
+        listStorage.appendChild(listItem);
+        // Content
+        listItem.innerText = `${itemName}`; 
     };

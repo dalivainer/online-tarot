@@ -126,12 +126,9 @@ cardBtn.addEventListener("click", throwCard);
 
     function throwCard () {
         const result = cards[Math.floor(Math.random()* cards.length)];
-        console.log(result);
 
         //cambiar imagen e información
-        //imagen NOT WORKING
         let imageDisplay = document.getElementById("img-container");
-        /* const imgJSON = JSON.stringify(imageDisplay); */
         imageDisplay.innerHTML = `<img src= "${result.img}" alt="card-display">`;
         //Título
         let title = document.querySelector("h1");
@@ -165,4 +162,14 @@ cardBtn.addEventListener("click", throwCard);
                 });
             };
             refreshBtn.addEventListener("click", reload);
+            
+            // STORAGE
+            sessionStorage.setItem("lastCard", result.name);
+            let itemName = sessionStorage.getItem("lastCard");
+            // Dom
+            let listStorage = document.getElementById("listStorage");
+            let listItem = document.createElement("p");
+            listStorage.appendChild(listItem);
+            // Content
+            listItem.innerText = `${itemName}`; 
     };
