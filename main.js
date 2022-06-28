@@ -6,6 +6,9 @@ swal({
   });
 
 // Card Array
+/* const cards = fetch('/data.json')
+.then( (res) => res.json()) */
+
 const cards = [
     {
         name: "El Loco",
@@ -117,7 +120,7 @@ const cards = [
         message: "Celebrá tus victorias personales",
         img: "https://live.staticflickr.com/3255/5771842194_b78a6abb62.jpg" 
     }
-];
+]; 
 
 // FUNCIÓN ORÁCULO
 //Al apretar la carta
@@ -125,11 +128,14 @@ let cardBtn = document.getElementById("card-btn");
 cardBtn.addEventListener("click", throwCard);
 
     function throwCard () {
+        /* const cards = fetch('data.json')
+        .then( (res) => res.json()) */
+
         const result = cards[Math.floor(Math.random()* cards.length)];
 
         //cambiar imagen e información
         let imageDisplay = document.getElementById("img-container");
-        imageDisplay.innerHTML = `<img src= "${result.img}" alt="card-display">`;
+        imageDisplay.innerHTML = `<img src= "${result.img}" alt="card-display">`
         //Título
         let title = document.querySelector("h1");
         title.innerText = result.name;
